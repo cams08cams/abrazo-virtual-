@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrazo Virtual</title>
+    <style>
+        body {
+            background-image: url(papel-pintado-patron-corazon-pequeno-lindo-impresion-tejidos-textiles_1017-49356.avif);
+            background-size: cover;
+            font-family: 'Cursive', sans-serif;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 50px;
+        }
+        img {
+            width: 200px;
+            margin: 20px 0;
+        }
+        .cargando {
+            font-size: 1.5em;
+        }
+        .barra {
+            width: 300px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+        .progreso {
+            height: 100%;
+            width: 0;
+            background-color: #ff69b4;
+            transition: width 2s;
+        }
+        .mensaje {
+            font-size: 1.5em;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Abrazo Virtual</h1>
+    <img src="hug.svg" alt="Muñequito esperando un abrazo">
+    <div class="cargando">Cargando...</div>
+    <div class="barra">
+        <div class="progreso"></div>
+    </div>
+    <div class="mensaje">¡Abrazo enviado!</div>
+    <script>
+        window.onload = function() {
+            const progreso = document.querySelector('.progreso');
+            const mensaje = document.querySelector('.mensaje');
+            progreso.style.width = '100%';
+            setTimeout(() => {
+                mensaje.style.display = 'block';
+            }, 2000);
+        };
+    </script>
+</body>
+</html> 
